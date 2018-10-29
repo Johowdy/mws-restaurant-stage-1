@@ -17,9 +17,6 @@
 }
 
 @media screen and (max-width: 800px) {
-  #breadcrumb {
-    width: calc(100% - 80px);
-  }
   #restaurant-container,
   #reviews-container,
   .inside #map-container,
@@ -29,15 +26,24 @@
   .inside #map-container {
     position: relative;
     height: 400px;
-    top: 131px;
     right: inherit;
-  }
-  .inside #footer {
-    width: calc(100% - 50px);
   }
   #restaurant-img,
   #restaurant-cuisine {
     width: 100%;
   }
+}
 
+@media screen and (min-width: 1300px) {
+  .inside {
+    max-width: 1300px;
+    margin: auto;
+  }
+  .inside #map-container {
+    left: 50%;
+    max-width: 650px;
+  }
+  .inside header {
+    max-width: 1300px;
+  }
 }
