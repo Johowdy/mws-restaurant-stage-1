@@ -15,3 +15,29 @@
     margin: auto;
   }
 }
+
+@media screen and (max-width: 800px) {
+  #breadcrumb {
+    width: calc(100% - 80px);
+  }
+  #restaurant-container,
+  #reviews-container,
+  .inside #map-container,
+  #reviews-list li {
+    width: inherit;
+  }
+  .inside #map-container {
+    position: relative;
+    height: 400px;
+    top: 131px;
+    right: inherit;
+  }
+  .inside #footer {
+    width: calc(100% - 50px);
+  }
+  #restaurant-img,
+  #restaurant-cuisine {
+    width: 100%;
+  }
+
+}
