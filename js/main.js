@@ -7,11 +7,16 @@ var markers = []
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', event => {
+  registerServiceWorker();
   initMap(); // added
   fetchNeighborhoods();
   fetchCuisines();
 });
+
+registerServiceWorker = () => {
+  navigator.serviceWorker.register('/sw.js');
+}
 
 /**
  * Fetch all neighborhoods and set their HTML.
@@ -160,6 +165,7 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
+  image.alt = 'restaurant detail';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
